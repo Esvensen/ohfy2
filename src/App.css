@@ -114,10 +114,6 @@ section {
   display: block;
 }
 
-body {
-  line-height: 1;
-}
-
 ol,
 ul {
   list-style: none;
@@ -159,6 +155,7 @@ html {
 }
 
 body {
+  cursor: url("/assets/img/bloodstainedcross.cur"), auto;
   background-color: #fff;
   transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1),
     color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
@@ -274,7 +271,7 @@ b {
 }
 
 .dropdown-trigger {
-  cursor: pointer;
+  cursor: url("/assets/img/litcross.cur"), pointer;
 }
 
 .dropdown-menu {
@@ -312,6 +309,7 @@ b {
   text-transform: uppercase;
   font-family: var(--nav-font);
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: url("/assets/img/litcross.cur"), pointer;
 }
 
 .dropdown-link:hover {
@@ -330,10 +328,12 @@ body.records-dark-theme .nav-link {
 
 body.records-dark-theme .nav-link:hover {
   color: white;
+  cursor: url("/assets/img/litcross.cur"), pointer;
 }
 
 body.records-dark-theme .dropdown-trigger {
   color: white;
+  cursor: url("/assets/img/litcross.cur"), pointer;
 }
 
 body.records-dark-theme .dropdown-menu {
@@ -463,7 +463,7 @@ body.records-dark-theme .nav-logo img {
   font-family: var(--nav-font);
   font-size: 1rem;
   text-transform: uppercase;
-  cursor: pointer;
+  cursor: url("/assets/img/litcross.cur"), pointer;
   padding: 0.5rem 1rem;
   transition: all 0.3s;
   text-decoration: none;
@@ -488,7 +488,7 @@ body.records-dark-theme .nav-logo img {
 .name {
   position: relative;
   text-align: left;
-  cursor: pointer;
+  cursor: url("/assets/img/litcross.cur"), pointer;
   min-width: 200px;
   z-index: 2;
 }
@@ -631,7 +631,7 @@ body.records-dark-theme .nav-logo img {
   font-weight: 600;
   font-family: var(--body-font);
   text-transform: uppercase;
-  cursor: pointer;
+  cursor: url("/assets/img/litcross.cur"), pointer;
   transition: all 0.3s;
 }
 
@@ -771,7 +771,7 @@ body.records-dark-theme .nav-logo img {
 
 .corner-link:hover {
   text-decoration: underline;
-  cursor: pointer;
+  cursor: url("/assets/img/litcross.cur"), pointer;
 }
 
 .top-left {
@@ -1046,6 +1046,7 @@ body.records-dark-theme .nav-logo img {
 
 .booking-form button {
   width: 100%;
+  cursor: url("/assets/img/litcross.cur"), pointer;
 }
 @media (max-width: 920px) {
   .booking-form .two-col {
@@ -1067,7 +1068,7 @@ body.records-dark-theme .nav-logo img {
   background-color: #000;
   color: #fff;
   border: none;
-  cursor: pointer;
+  cursor: url("/assets/img/litcross.cur"), pointer;
   font-size: 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1095,7 +1096,7 @@ body.records-dark-theme .nav-logo img {
 .accordion {
   background-color: #f1f1f1;
   color: #000;
-  cursor: pointer;
+  cursor: url("/assets/img/litcross.cur"), pointer;
   padding: 1.25rem;
   width: 100%;
   text-align: left;
