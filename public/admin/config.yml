@@ -1,0 +1,27 @@
+backend:
+  name: git-gateway
+  branch: main # update if you use a different default branch
+
+media_folder: "public/assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "artists"
+    label: "Artists"
+    folder: "_posts"
+    extension: "md"
+    format: "frontmatter"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: "title", label: "Name" }
+      - {
+          name: "resident",
+          label: "Resident",
+          widget: "boolean",
+          default: true,
+        }
+      - { name: "instagram", label: "Instagram" }
+      - { name: "thumbnail", label: "Thumbnail", widget: "image" }
+      - { name: "email", label: "Email", widget: "string", required: false }
+      - { name: "body", label: "Bio", widget: "markdown" }
