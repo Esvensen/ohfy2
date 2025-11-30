@@ -6,9 +6,33 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <script type="module">
-      import CMS from "decap-cms-app";
-      CMS.init();
+    <!-- CMS will inject its app into this div -->
+    <div id="nc-root"></div>
+
+    <script>
+      window.CMS_MANUAL_INIT = true;
+    </script>
+    <!-- Decap CMS bundle -->
+    <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+    <script>
+      window.addEventListener("load", () => {
+        if (window.CMS) {
+          window.CMS.init({
+            config: "/admin/config.yml", // make sure it resolves correctly
+          });
+        }
+      });
+
+      // Netlify Identity helper
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("init", (user) => {
+          if (!user) {
+            window.netlifyIdentity.on("login", () =>
+              document.location.reload()
+            );
+          }
+        });
+      }
     </script>
   </body>
 </html>
