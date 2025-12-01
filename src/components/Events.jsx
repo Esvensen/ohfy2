@@ -1,7 +1,7 @@
 const Events = () => {
   return (
     <main>
-      <section className="events-images" style={{ marginTop: "150px" }}>
+      <section className="events-images">
         <div className="imgholder">
           <img
             src="/assets/events/WhatsApp Image 2025-11-30 at 12.59.17.png"

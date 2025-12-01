@@ -241,8 +241,45 @@ body {
   }
 }
 
+/* Invert colours on Records page dark theme */
+body.records-dark-theme .navbar img {
+  filter: invert(1);
+}
+body.records-dark-theme .navbar .nav-link {
+  color: #fff;
+}
+body.records-dark-theme .dropdown-trigger,
+body.records-dark-theme .dropdown-link {
+  color: #fff;
+}
+body.records-dark-theme .mobile-bottom-nav {
+  background: #000;
+}
+body.records-dark-theme .mobile-bottom-nav .mobile-nav-item span {
+  color: #fff;
+}
+body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
+  filter: invert(1);
+}
+
+/* Transition for nav elements */
+.navbar img,
+.mobile-bottom-nav img {
+  transition: filter 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.navbar .nav-link,
+.dropdown-trigger,
+.dropdown-link,
+.mobile-bottom-nav .mobile-nav-item span {
+  transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.mobile-bottom-nav {
+  transition: background-color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* Records Page Dark Theme */
 body.records-dark-theme {
+  /* existing body background */
   background-color: #000;
 }
 
@@ -436,8 +473,14 @@ body.records-dark-theme .nav-logo img {
   gap: 2rem;
   padding: 2rem;
   max-width: 1400px;
-  margin: 0 auto;
+  margin: 150px auto 0 auto;
   justify-items: center; /* This centers items in their grid cells */
+}
+
+@media (max-width: 920px) {
+  .events-images {
+    margin: 16px auto 0 auto;
+  }
 }
 
 /* Center the last row items when there are fewer than 4 */
@@ -779,7 +822,7 @@ body.records-dark-theme .nav-logo img {
 /* Records Mobile Responsive */
 @media only screen and (max-width: 920px) {
   .records-container {
-    margin: 100px 16px 16px 16px;
+    margin: 16px 16px 16px 16px;
     border: none;
     padding: 1rem;
     width: calc(100vw - 32px);
@@ -1369,6 +1412,7 @@ body.records-dark-theme .nav-logo img {
   .footer-content {
     flex-direction: column;
     text-align: center;
+    padding-bottom: 100px;
   }
 }
 
