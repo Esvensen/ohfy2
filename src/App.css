@@ -4,7 +4,8 @@
 /* Custom Fonts */
 @font-face {
   font-family: "Edda";
-  src: url("/assets/fonts/edda.ttf") format("truetype");
+  src: url("/assets/fonts/edda.woff2") format("woff2"),
+    url("/assets/fonts/edda.woff") format("woff");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
