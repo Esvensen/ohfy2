@@ -166,6 +166,81 @@ body {
   padding: 0;
 }
 
+/* Hide desktop navbar on mobile */
+@media (max-width: 919px) {
+  .navbar {
+    display: none;
+  }
+}
+
+/* Mobile Bottom Nav */
+.mobile-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 8px 16px;
+  background: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mobile-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #000;
+  text-decoration: none;
+  font-family: "Spectral", serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  gap: 4px;
+}
+.mobile-nav-item img {
+  width: 48px;
+  height: 48px;
+}
+.mobile-nav-item.active span {
+  font-weight: 600;
+}
+
+@media (min-width: 920px) {
+  .mobile-bottom-nav {
+    display: none;
+  }
+}
+
+/* Tattoo Top Nav */
+.tattoo-top-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #fff;
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Spectral", serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  border: none;
+}
+.tattoo-top-nav a {
+  color: #000;
+  text-decoration: none;
+}
+.tattoo-top-nav a.active {
+  text-decoration: underline;
+}
+
+@media (min-width: 920px) {
+  .tattoo-top-nav {
+    display: none;
+  }
+}
+
 /* Records Page Dark Theme */
 body.records-dark-theme {
   background-color: #000;

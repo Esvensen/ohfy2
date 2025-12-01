@@ -1,6 +1,8 @@
 import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import MobileBottomNav from "./components/MobileBottomNav";
+import TattooTopNav from "./components/TattooTopNav";
 import Home from "./components/Home";
 import Tattoo from "./components/Tattoo";
 import Studio from "./components/Studio";
@@ -17,6 +19,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <TattooTopNav />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/tattoo" element={<Tattoo />} />
@@ -30,6 +33,7 @@ function App() {
         <Route path="/policy" element={<Policy />} />
       </Routes>
       <Footer />
+      <MobileBottomNav />
     </div>
   );
 }
