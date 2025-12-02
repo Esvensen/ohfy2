@@ -1,4 +1,5 @@
 import { Routes, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import MobileBottomNav from "./components/MobileBottomNav";
@@ -18,6 +19,7 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
+      <ScrollToTop />
       <Navbar />
       <TattooTopNav />
       <Routes>

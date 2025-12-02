@@ -1,7 +1,7 @@
 const Studio = () => {
   return (
     <main>
-      <section className="additionalImages" style={{ marginTop: "150px" }}>
+      <section className="additionalImages">
         <div className="imgholder">
           <img src="/assets/img/studio (1).jpeg" alt="" />
         </div>
