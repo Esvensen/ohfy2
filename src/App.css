@@ -688,7 +688,7 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
    ======================================== */
 .events-images {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   padding: 2rem;
   max-width: var(--max-width-xl);
@@ -713,15 +713,6 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
 
 .events-images .imgholder img:hover {
   transform: scale(1.02);
-}
-
-/* Center last row items */
-.events-images .imgholder:nth-last-child(-n + 2):nth-child(4n + 1),
-.events-images
-  .imgholder:nth-last-child(-n + 2):nth-child(4n + 1)
-  ~ .imgholder {
-  grid-column: span 2;
-  max-width: 50%;
 }
 
 /* ========================================
@@ -1001,7 +992,7 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
    ======================================== */
 .additionalImages {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 1rem;
   padding: 2rem;
   max-width: var(--max-width-xl);
@@ -1317,14 +1308,6 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
     gap: 1.5rem;
     padding: 1rem;
     margin: var(--page-top-mobile) auto 0;
-  }
-
-  .events-images .imgholder:nth-last-child(-n + 2):nth-child(4n + 1),
-  .events-images
-    .imgholder:nth-last-child(-n + 2):nth-child(4n + 1)
-    ~ .imgholder {
-    grid-column: span 1;
-    max-width: 100%;
   }
 
   /* Records */
