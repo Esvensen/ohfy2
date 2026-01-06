@@ -2,6 +2,10 @@ import { Link, useLocation } from "react-router-dom";
 
 const MobileBottomNav = () => {
   const { pathname } = useLocation();
+
+  // Hide on splash page
+  if (pathname === "/") return null;
+
   return (
     <nav className="mobile-bottom-nav">
       <Link

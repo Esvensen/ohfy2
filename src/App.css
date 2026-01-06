@@ -431,10 +431,12 @@ b {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: var(--space-s) var(--space-m);
+  padding: var(--space-s) 0;
+  padding-bottom: calc(var(--space-s) + env(safe-area-inset-bottom));
   background: var(--color-bg);
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   align-items: center;
   transition: background-color var(--duration-slow) var(--ease);
 }
@@ -1533,8 +1535,10 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
 
   .image {
     width: auto !important;
+    height: auto !important;
     max-height: 500px !important;
     max-width: 100% !important;
+    object-fit: contain !important;
   }
 
   .copy {
