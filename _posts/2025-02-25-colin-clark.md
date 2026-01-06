@@ -18,7 +18,7 @@ thumbnail: /assets/uploads/38b52942-3b09-48fe-9800-366e2f9bdb6d.jpg
 date: 2025-02-25T16:31:18.473Z
 resident?: true
 title: Colin Clark
-resident: false
+resident: true
 instagram: slimesociety
 ---
 T﻿he big dog Colin Clark AKA slimesociety is now part of the OHFY cult. Email cclarktattooing@gmail.com for inquiries!
