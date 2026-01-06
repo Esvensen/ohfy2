@@ -431,17 +431,17 @@ b {
   left: 0;
   right: 0;
   z-index: 1000;
-  padding: var(--space-s) 0;
+  padding: var(--space-s) var(--space-l);
   padding-bottom: calc(var(--space-s) + env(safe-area-inset-bottom));
   background: var(--color-bg);
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-items: center;
+  display: flex;
+  justify-content: space-between;
   align-items: center;
   transition: background-color var(--duration-slow) var(--ease);
 }
 
 .mobile-nav-item {
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
