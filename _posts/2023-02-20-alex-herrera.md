@@ -1,14 +1,8 @@
 ---
-layout: artist
-resident?: true
-title: "Alex Herrera "
-instagram: somethinglowly
-date: 2023-02-20T16:03:14.447Z
 bio: |-
   V﻿ery happy to welcome Alex to the OHFY team! 
 
   C﻿ontact him direct or fill in our our booking form above to get booked in!
-thumbnail: /assets/uploads/image00006.jpeg
 galleryImages:
   - /assets/uploads/c5932b8d-b012-4890-a059-4d6db69fbf2b.jpg
   - /assets/uploads/19c27b38-5b42-4b19-aa5b-0de2b0c6c0ce.jpg
@@ -25,4 +19,12 @@ galleryImages:
   - /assets/uploads/image00003.jpeg
   - /assets/uploads/image00002.jpeg
   - /assets/uploads/image00001.jpeg
+layout: artist
+thumbnail: /assets/uploads/image00006.jpeg
+date: 2023-02-20T16:03:14.447Z
+resident?: true
+title: "Alex Herrera "
+resident: true
+instagram: somethinglowly
 ---
+V﻿ery happy to welcome Alex to the OHFY team! C﻿ontact him direct or fill in our our booking form above to get booked in!
