@@ -24,4 +24,11 @@ collections:
       - { name: "instagram", label: "Instagram" }
       - { name: "thumbnail", label: "Thumbnail", widget: "image" }
       - { name: "email", label: "Email", widget: "string", required: false }
+      - {
+          name: "galleryImages",
+          label: "Gallery Images",
+          widget: "list",
+          field: { name: "image", label: "Image", widget: "image" },
+          required: false,
+        }
       - { name: "body", label: "Bio", widget: "markdown" }
