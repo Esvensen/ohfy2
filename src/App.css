@@ -1198,10 +1198,6 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
   color: var(--color-muted);
 }
 
-.booking-form {
-  padding-top: var(--page-top-desktop);
-}
-
 .booking-form label {
   font-family: var(--font-body);
   font-size: 12px;
@@ -1232,12 +1228,24 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
 
 .booking-form .checkboxes {
   display: flex;
-  gap: var(--space-l);
+  flex-wrap: wrap;
+  gap: var(--space-m);
   margin-top: 4px;
 }
 
 .booking-form .check {
   font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+.booking-form .check input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  flex-shrink: 0;
 }
 
 .button {

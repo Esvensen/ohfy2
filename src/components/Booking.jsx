@@ -23,21 +23,27 @@ const Booking = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const body =
-      `NAME: ${form.name}%0D%0A` +
-      `PRONOUNS: ${form.pronouns}%0D%0A` +
-      `SIZE & PLACEMENT: ${form.size}%0D%0A` +
-      `ARTIST: ${form.artist}%0D%0A` +
-      `AVAILABILITY: ${form.weekday ? "Weekday " : ""}${
-        form.weekend ? "Weekend" : ""
-      }%0D%0A` +
-      `DESCRIPTION: ${form.description}%0D%0A` +
-      `BUDGET: ${form.budget}%0D%0A` +
-      `ACCESSIBILITY: ${form.accessibility}`;
 
-    window.location.href = `mailto:hello@onlyhereforyou.com?subject=Tattoo%20Booking%20-%20${encodeURIComponent(
-      form.name
-    )}&body=${body}`;
+    const availability =
+      [form.weekday ? "Weekday" : "", form.weekend ? "Weekend" : ""]
+        .filter(Boolean)
+        .join(", ") || "Not specified";
+
+    const bodyText = [
+      `NAME: ${form.name}`,
+      `PRONOUNS: ${form.pronouns}`,
+      `SIZE & PLACEMENT: ${form.size}`,
+      `ARTIST: ${form.artist}`,
+      `AVAILABILITY: ${availability}`,
+      `DESCRIPTION: ${form.description}`,
+      `BUDGET: ${form.budget}`,
+      `ACCESSIBILITY: ${form.accessibility}`,
+    ].join("\n\n");
+
+    const subject = encodeURIComponent(`Tattoo Booking - ${form.name}`);
+    const body = encodeURIComponent(bodyText);
+
+    window.location.href = `mailto:hello@onlyhereforyou.com?subject=${subject}&body=${body}`;
   };
 
   return (
