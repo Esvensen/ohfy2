@@ -32,3 +32,17 @@ collections:
           required: false,
         }
       - { name: "body", label: "Bio", widget: "markdown" }
+
+  - name: "events"
+    label: "Events"
+    files:
+      - name: "events-gallery"
+        label: "Events Gallery"
+        file: "_data/events.json"
+        fields:
+          - {
+              name: "images",
+              label: "Event Images",
+              widget: "list",
+              field: { name: "image", label: "Image", widget: "image" },
+            }

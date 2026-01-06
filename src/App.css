@@ -733,13 +733,19 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - var(--page-top-desktop) - 100px);
+  justify-content: center;
 }
 
 .selector {
   display: flex;
   justify-content: flex-start;
-  gap: 3rem;
-  margin-bottom: 4rem;
+  gap: var(--space-m);
+  margin-bottom: 2rem;
+  width: 100%;
 }
 
 .selector .option {
@@ -762,7 +768,7 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: var(--space-m);
+  gap: var(--space-l);
   max-width: 1200px;
   margin: 0 auto;
   align-items: flex-start;
@@ -1147,37 +1153,57 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
 }
 
 .accordion {
-  background-color: var(--color-accordion-bg);
+  background-color: transparent;
   color: var(--color-fg);
   cursor: var(--cursor-pointer);
-  padding: 1.25rem;
+  padding: 0.5rem 0;
   width: 100%;
   text-align: left;
   border: none;
   outline: none;
-  transition: background-color var(--duration-fast) var(--ease);
-  font-size: 1rem;
-  font-weight: bold;
-  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-family: var(--font-body);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .accordion:hover {
-  background-color: #ddd;
+  background-color: transparent;
+}
+
+.accordion i {
+  font-style: normal;
+  transition: transform var(--duration-fast) var(--ease);
+}
+
+.accordion.open {
+  font-style: italic;
+}
+
+.accordion.open i {
+  transform: rotate(180deg);
 }
 
 .panel {
-  padding: 0 1.25rem;
+  padding: 0;
   background-color: var(--color-bg);
-  max-height: 0;
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--duration-fast) var(--ease);
+}
+
+.panel-inner {
   overflow: hidden;
-  transition: max-height var(--duration-fast) ease-out;
 }
 
 .panel.active {
-  max-height: 500px;
-  padding: 1.25rem;
-  border: 1px solid #ddd;
-  border-top: none;
+  grid-template-rows: 1fr;
+}
+
+.panel.active .panel-inner {
+  padding-bottom: 1rem;
 }
 
 /* ========================================
@@ -1379,15 +1405,22 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
     flex-direction: column;
     margin: var(--page-top-desktop) 0;
     height: auto;
+    padding: 0 2rem;
+    box-sizing: border-box;
+  }
+
+  .imageBox {
+    max-width: 100%;
   }
 
   .image {
     width: auto !important;
     max-height: 500px !important;
+    max-width: 100% !important;
   }
 
   .copy {
-    max-width: 90% !important;
+    max-width: 100% !important;
   }
 
   /* Portraits */

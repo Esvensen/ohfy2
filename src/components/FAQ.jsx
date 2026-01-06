@@ -84,15 +84,17 @@ const FAQ = () => {
           <b>F.A.Q.</b>
         </h2>
         {faqs.map((faq, index) => (
-          <div key={index}>
+          <div key={index} className="faq-item">
             <button
-              className="accordion"
+              className={`accordion ${openIndex === index ? "open" : ""}`}
               onClick={() => toggleAccordion(index)}
             >
-              {faq.question}
+              {faq.question} <i className="fa-solid fa-cross"></i>
             </button>
             <div className={`panel ${openIndex === index ? "active" : ""}`}>
-              <p style={{ whiteSpace: "pre-line" }}>{faq.answer}</p>
+              <div className="panel-inner">
+                <p style={{ whiteSpace: "pre-line" }}>{faq.answer}</p>
+              </div>
             </div>
           </div>
         ))}
