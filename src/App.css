@@ -665,7 +665,7 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
 }
 
 .text {
-  padding: 3rem 2rem;
+  padding: 8rem 2rem;
 }
 
 .text .copy p + p {
@@ -1571,10 +1571,16 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
     max-width: 100% !important;
   }
 
+  .text {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   /* Portraits */
   .portraits {
     flex-direction: column;
     gap: var(--space-l);
+    margin: 0;
   }
 
   .portrait {

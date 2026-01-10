@@ -25,7 +25,7 @@ const Tattoo = () => {
         />
       </section>
 
-      <section className="row text page-container">
+      <section className="text page-container">
         <div className="copy">
           <p>
             Both moved to London from mid-Wales, with Elliott serving as the
