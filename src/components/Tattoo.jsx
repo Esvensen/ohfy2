@@ -3,7 +3,7 @@ const Tattoo = () => {
     <main>
       <section className="row imageText page-container">
         <div className="imageBox">
-          <img className="image" src="/assets/img/butterflyLady.png" alt="" />
+          <img className="image" src="/assets/img/abtlogo.gif" alt="" />
         </div>
         <div className="padding"></div>
         <div className="copy">
