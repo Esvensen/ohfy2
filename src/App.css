@@ -689,7 +689,8 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
 }
 
 .portrait {
-  width: calc((100% - var(--space-l)) / 2);
+  flex: 1 1 0;
+  min-width: 0;
   height: auto;
   object-fit: cover;
 }
@@ -1170,29 +1171,6 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
   width: 100%;
 }
 
-.check {
-  display: flex !important;
-  flex-direction: row;
-  align-items: center;
-  gap: 6px;
-}
-
-.booking input[type="text"],
-.booking select {
-  padding: 0.75rem;
-  border: none;
-  border-bottom: 2px solid var(--color-fg);
-  font-size: 1rem;
-  font-family: inherit;
-  width: 100%;
-}
-
-.halfWidth {
-  width: 100%;
-}
-.checkbox {
-  margin-right: 0.5rem;
-}
 .note {
   font-size: 0.85rem;
   color: var(--color-muted);
@@ -1623,18 +1601,6 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
   }
   .tattoo-top-nav {
     display: none;
-  }
-}
-
-/* ========================================
-   RESPONSIVE - Small (max-width: 768px)
-   ======================================== */
-@media (max-width: 768px) {
-  .artists {
-    margin-top: var(--page-top-mobile);
-  }
-  .faq {
-    margin-top: var(--page-top-mobile);
   }
 }
 
