@@ -12,6 +12,18 @@ const ArtistDetail = () => {
     setLoadedImages((prev) => ({ ...prev, [index]: true }));
   };
 
+  // Handle already-cached images on iOS Safari
+  const handleImageRef = (img, index) => {
+    if (
+      img &&
+      img.complete &&
+      img.naturalHeight !== 0 &&
+      !loadedImages[index]
+    ) {
+      setLoadedImages((prev) => ({ ...prev, [index]: true }));
+    }
+  };
+
   if (!artist) return <div>Artist not found</div>;
 
   const galleryImages = artist.gallery || artist.galleryImages || [];
@@ -44,6 +56,7 @@ const ArtistDetail = () => {
           {galleryImages.map((img, i) => (
             <div key={i} className="imgholder">
               <img
+                ref={(el) => handleImageRef(el, i)}
                 src={img}
                 alt=""
                 className={loadedImages[i] ? "loaded" : ""}

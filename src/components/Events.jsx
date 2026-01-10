@@ -15,6 +15,18 @@ const Events = () => {
     setLoadedImages((prev) => ({ ...prev, [index]: true }));
   };
 
+  // Handle already-cached images on iOS Safari
+  const handleImageRef = (img, index) => {
+    if (
+      img &&
+      img.complete &&
+      img.naturalHeight !== 0 &&
+      !loadedImages[index]
+    ) {
+      setLoadedImages((prev) => ({ ...prev, [index]: true }));
+    }
+  };
+
   const handleImageClick = (index) => {
     setSelectedIndex(index);
     setIsClosing(false);
@@ -98,6 +110,7 @@ const Events = () => {
             onClick={() => handleImageClick(index)}
           >
             <img
+              ref={(el) => handleImageRef(el, index)}
               src={image}
               alt="Event"
               className={loadedImages[index] ? "loaded" : ""}

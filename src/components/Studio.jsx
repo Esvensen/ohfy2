@@ -20,12 +20,25 @@ const Studio = () => {
     setLoadedImages((prev) => ({ ...prev, [index]: true }));
   };
 
+  // Handle already-cached images on iOS Safari
+  const handleImageRef = (img, index) => {
+    if (
+      img &&
+      img.complete &&
+      img.naturalHeight !== 0 &&
+      !loadedImages[index]
+    ) {
+      setLoadedImages((prev) => ({ ...prev, [index]: true }));
+    }
+  };
+
   return (
     <main>
       <section className="additionalImages">
         {studioImages.map((src, index) => (
           <div className="imgholder" key={index}>
             <img
+              ref={(el) => handleImageRef(el, index)}
               src={src}
               alt=""
               className={loadedImages[index] ? "loaded" : ""}
