@@ -46,3 +46,17 @@ collections:
               widget: "list",
               field: { name: "image", label: "Image", widget: "image" },
             }
+
+  - name: "studio"
+    label: "Studio"
+    files:
+      - name: "studio-gallery"
+        label: "Studio Gallery"
+        file: "_data/studio.json"
+        fields:
+          - {
+              name: "images",
+              label: "Studio Images",
+              widget: "list",
+              field: { name: "image", label: "Image", widget: "image" },
+            }

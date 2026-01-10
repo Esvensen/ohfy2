@@ -1,20 +1,10 @@
 import { useState } from "react";
-
-const studioImages = [
-  "/assets/img/studio (1).jpeg",
-  "/assets/img/studio (2).jpeg",
-  "/assets/img/studio (3).jpeg",
-  "/assets/img/studio (4).jpeg",
-  "/assets/img/studio (5).jpeg",
-  "/assets/img/studio (6).jpeg",
-  "/assets/img/studio (7).jpeg",
-  "/assets/img/studio (8).jpeg",
-  "/assets/img/studio (9).jpeg",
-  "/assets/img/studio (10).jpeg",
-];
+import studioData from "../../_data/studio.json";
 
 const Studio = () => {
   const [loadedImages, setLoadedImages] = useState({});
+
+  const images = studioData.images;
 
   const handleImageLoad = (index) => {
     setLoadedImages((prev) => ({ ...prev, [index]: true }));
@@ -35,7 +25,7 @@ const Studio = () => {
   return (
     <main>
       <section className="additionalImages">
-        {studioImages.map((src, index) => (
+        {images.map((src, index) => (
           <div className="imgholder" key={index}>
             <img
               ref={(el) => handleImageRef(el, index)}
