@@ -4,7 +4,12 @@ import eventsData from "../../_data/events.json";
 const Events = () => {
   const [selectedImage, setSelectedImage] = useState(null);
   const [isClosing, setIsClosing] = useState(false);
+  const [loadedImages, setLoadedImages] = useState({});
   const canvasRef = useRef(null);
+
+  const handleImageLoad = (index) => {
+    setLoadedImages((prev) => ({ ...prev, [index]: true }));
+  };
 
   const handleImageClick = (image) => {
     setSelectedImage(image);
@@ -43,7 +48,12 @@ const Events = () => {
             className="imgholder"
             onClick={() => handleImageClick(image)}
           >
-            <img src={image} alt="Event" />
+            <img
+              src={image}
+              alt="Event"
+              className={loadedImages[index] ? "loaded" : ""}
+              onLoad={() => handleImageLoad(index)}
+            />
           </div>
         ))}
       </section>

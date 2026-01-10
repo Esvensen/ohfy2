@@ -704,7 +704,7 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
   gap: 2rem;
   padding: 2rem;
   max-width: var(--max-width-xl);
-  margin: var(--page-top-desktop) auto 0 0;
+  margin: var(--page-top-desktop) auto 0;
   justify-items: center;
 }
 
@@ -1145,6 +1145,17 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
   height: 100%;
   object-fit: cover;
   transition: transform var(--duration-fast);
+}
+
+.additionalImages .imgholder img,
+.events-images .imgholder img {
+  opacity: 0;
+  transition: transform var(--duration-fast), opacity var(--duration-slow);
+}
+
+.additionalImages .imgholder img.loaded,
+.events-images .imgholder img.loaded {
+  opacity: 1;
 }
 
 .imgholder img:hover {
