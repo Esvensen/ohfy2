@@ -704,7 +704,7 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
   gap: 2rem;
   padding: 2rem;
   max-width: var(--max-width-xl);
-  margin: var(--page-top-desktop) auto 0;
+  margin: var(--page-top-desktop) auto 0 0;
   justify-items: center;
 }
 
@@ -1527,7 +1527,7 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
   /* Rows */
   .row {
     flex-direction: column;
-    margin: var(--page-top-desktop) 0;
+    margin: var(--page-top-desktop) auto 0;
     height: auto;
     padding: 0 2rem;
     box-sizing: border-box;
