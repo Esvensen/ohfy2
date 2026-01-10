@@ -1,27 +1,76 @@
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import eventsData from "../../_data/events.json";
 
 const Events = () => {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [selectedIndex, setSelectedIndex] = useState(null);
   const [isClosing, setIsClosing] = useState(false);
   const [loadedImages, setLoadedImages] = useState({});
+  const [touchStart, setTouchStart] = useState(null);
   const canvasRef = useRef(null);
+
+  const images = eventsData.images;
+  const selectedImage = selectedIndex !== null ? images[selectedIndex] : null;
 
   const handleImageLoad = (index) => {
     setLoadedImages((prev) => ({ ...prev, [index]: true }));
   };
 
-  const handleImageClick = (image) => {
-    setSelectedImage(image);
+  const handleImageClick = (index) => {
+    setSelectedIndex(index);
     setIsClosing(false);
   };
 
   const handleClose = () => {
     setIsClosing(true);
     setTimeout(() => {
-      setSelectedImage(null);
+      setSelectedIndex(null);
       setIsClosing(false);
     }, 300);
+  };
+
+  const goToPrevious = useCallback(() => {
+    if (selectedIndex !== null && selectedIndex > 0) {
+      setSelectedIndex(selectedIndex - 1);
+    }
+  }, [selectedIndex]);
+
+  const goToNext = useCallback(() => {
+    if (selectedIndex !== null && selectedIndex < images.length - 1) {
+      setSelectedIndex(selectedIndex + 1);
+    }
+  }, [selectedIndex, images.length]);
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (selectedIndex === null) return;
+      if (e.key === "ArrowLeft") goToPrevious();
+      if (e.key === "ArrowRight") goToNext();
+      if (e.key === "Escape") handleClose();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedIndex, goToPrevious, goToNext]);
+
+  // Touch/swipe handling
+  const handleTouchStart = (e) => {
+    setTouchStart(e.touches[0].clientX);
+  };
+
+  const handleTouchEnd = (e) => {
+    if (touchStart === null) return;
+    const touchEnd = e.changedTouches[0].clientX;
+    const diff = touchStart - touchEnd;
+
+    if (Math.abs(diff) > 50) {
+      if (diff > 0) {
+        goToNext();
+      } else {
+        goToPrevious();
+      }
+    }
+    setTouchStart(null);
   };
 
   useEffect(() => {
@@ -42,11 +91,11 @@ const Events = () => {
   return (
     <main>
       <section className="events-images">
-        {eventsData.images.map((image, index) => (
+        {images.map((image, index) => (
           <div
             key={index}
             className="imgholder"
-            onClick={() => handleImageClick(image)}
+            onClick={() => handleImageClick(index)}
           >
             <img
               src={image}
@@ -62,6 +111,8 @@ const Events = () => {
         <div
           className={`lightbox-overlay ${isClosing ? "closing" : ""}`}
           onClick={handleClose}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
         >
           <div className="lightbox-background">
             <img src={selectedImage} alt="" />
