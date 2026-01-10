@@ -1334,8 +1334,26 @@ body.records-dark-theme .mobile-bottom-nav .mobile-nav-item img {
   padding-bottom: 1rem;
 }
 
+/* Store Policy (on FAQ page) */
+.store-policy {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.store-policy h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+.store-policy .policy-content p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
 /* ========================================
-   Policy Page
+   Policy Page (Privacy Policy)
    ======================================== */
 .policy .copy {
   max-width: 800px;
