@@ -30,6 +30,6 @@ title: "Alex Herrera "
 resident: true
 instagram: alexherreratattoo
 ---
-Need a skull, reaper or cryptoid??? Alex is your guy. 
+Need a skull, reaper or cryptoid??? Alex is your guy...
 
-book via - somethinglowly@gmail.com or fill in our booking form.
+Book via - somethinglowly@gmail.com or via our booking form.
