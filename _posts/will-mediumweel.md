@@ -17,4 +17,4 @@ galleryImages:
   - /assets/uploads/whatsapp-image-2026-07-14-at-16.50.41-6-.jpeg
   - /assets/uploads/whatsapp-image-2026-07-14-at-16.50.41-7-.jpeg
 ---
-Co-owner of Odds and Sodds Tattoo in Midlesborough - Will regularly guests with us here at OHFY. Enquire via our booking form or drop him a DM to book in!
+Co-owner of Odds and Sodds Tattoo in Middlesbrough - Will regularly guests with us here at OHFY. Enquire via our booking form or drop him a DM to book in!
