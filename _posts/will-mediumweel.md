@@ -1,5 +1,5 @@
 ---
-title: Will (Mediumweel)
+title: Mediumweel
 resident: false
 instagram: mediumweel
 thumbnail: /assets/uploads/whatsapp-image-2026-07-14-at-16.50.40.jpeg
