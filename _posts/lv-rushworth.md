@@ -6,6 +6,8 @@ thumbnail: /assets/uploads/dccc402a-3924-4640-bbdd-9b5628cbe3e7.jpg
 galleryImages:
   - /assets/uploads/f91f92bf-97ae-41d7-9530-3eabfd506cd4.jpg
   - /assets/uploads/e7982b2f-beff-45b2-9fad-03d0a6976eab.jpg
+  - /assets/uploads/21b0a776-d30c-4a7e-98ad-5af0c0b3620e-1-.jpg
+  - /assets/uploads/87a670bd-fb00-4b4f-a905-f05b6b471774-1-.jpg
   - /assets/uploads/bea5cda5-72fd-4ed5-a771-71853b7b6eae.jpg
   - /assets/uploads/ade843d9-5cb7-44ae-82d8-1b9a3f5bdf5a.jpg
   - /assets/uploads/d7f27700-6597-4a29-9b2d-c8ccaf810b2d.jpg
